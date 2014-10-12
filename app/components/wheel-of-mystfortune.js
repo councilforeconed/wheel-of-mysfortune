@@ -2,6 +2,9 @@ export default Ember.Component.extend({
   
   tagName: 'div',
   
+  height: 500,
+  width: 500,
+  
   startAngle: 0,
   arc: Math.PI / 8,
   spinTimeout: null,
@@ -16,7 +19,7 @@ export default Ember.Component.extend({
             "#56B9C5", "#1DB2D4", "#F8D43A", "#C43331"],
   
   didInsertElement: function () {
-    if (!this.get('canvas')) this.set('canvas', this.$()[0]);
+    if (!this.get('canvas')) this.set('canvas', this.$('canvas')[0]);
     this.drawRouletteWheel();
   },
   
@@ -72,8 +75,6 @@ export default Ember.Component.extend({
       ctx.lineTo(250 - 4, 250 - (outsideRadius - 5));
       ctx.lineTo(250 - 4, 250 - (outsideRadius + 5));
       ctx.fill();
-      
-      console.log('canvas');
     }
   }
   
