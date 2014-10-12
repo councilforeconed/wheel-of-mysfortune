@@ -361,6 +361,10 @@ td, th {
     border: 1px solid white; }
   .salary-data p {
     line-height: 0.5; }
+  .salary-data a {
+    color: white; }
+    .salary-data a:hover {
+      color: #EEE; }
 
 * {
   box-sizing: border-box; }
@@ -369,5 +373,8 @@ td, th {
   margin-bottom: 1rem;
   font-weight: 700;
   color: #c43331; }
+
+#chart {
+  margin-top: 1.5rem; }
 
 /*# sourceMappingURL=app.css.map */

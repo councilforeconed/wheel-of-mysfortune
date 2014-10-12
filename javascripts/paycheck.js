@@ -43,7 +43,7 @@ Paychecks.chartData = function () {
   var data = [ { x: 0, y: 0 } ];
   this.models.forEach(function (paycheck, index) {
     var datum = paycheck.actualEarnings() + data.slice(-1)[0].y;
-    data.push({ x: index + 1, y: datum });
+    data.push({ x: (index + 1) / 2, y: datum });
   });
   return data;
 };

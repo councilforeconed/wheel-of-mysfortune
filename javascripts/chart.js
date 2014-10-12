@@ -8,5 +8,16 @@ var graph = new Rickshaw.Graph({
     color: 'steelblue'
   }]
 });
- 
+
 graph.render();
+
+var xAxis = new Rickshaw.Graph.Axis.X({
+  graph: graph
+});
+
+var yAxis = new Rickshaw.Graph.Axis.Y({
+  graph: graph
+});
+
+yAxis.render();
+xAxis.render();
