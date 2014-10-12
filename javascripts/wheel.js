@@ -9,7 +9,7 @@ $(document).ready(function () {
   
   $wheelElement.prepend('<canvas width="' + width + '" height="' + height + '"></canvas>');
   
-  var colors = [null, "#74A949", "#B6DDD3", "#5E8AB9", "#E37536",
+  var colors = ["#74A949", "#B6DDD3", "#5E8AB9", "#E37536",
                 "#F8D43A", "#56B9C5", "#99C987", "#FFF5D5",
                 "#C43331", "#B6DDD3", "#62BA9D", "#E37536",
                 "#56B9C5", "#1DB2D4", "#F8D43A", "#C43331"];
@@ -44,9 +44,9 @@ $(document).ready(function () {
     
       ctx.font = '12px sans-serif';
       
-      ctx.imageSmoothingEnabled
+      ctx.imageSmoothingEnabled = true;
     
-      for(var i = 1; i <= 16; i++) {
+      for(var i = 0; i < 16; i++) {
         var angle = startAngle + i * arc;
         ctx.fillStyle = colors[i];
       
@@ -60,7 +60,7 @@ $(document).ready(function () {
         ctx.fillStyle = "black";
         ctx.translate(width / 2 + Math.cos(angle + arc / 2) * textRadius, height / 2 + Math.sin(angle + arc / 2) * textRadius);
         ctx.rotate(angle + arc / 2 + Math.PI / 2);
-        var text = i;
+        var text = i + 1;
         ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
         ctx.restore();
       } 
@@ -109,7 +109,7 @@ $(document).ready(function () {
     ctx.save();
     ctx.font = 'bold 30px sans-serif';
     addMisfortune(misfortune);
-    ctx.fillText(misfortune, width / 2 - ctx.measureText(misfortune).width / 2, width / 2 + 10);
+    ctx.fillText(misfortune + 1, width / 2 - ctx.measureText(misfortune).width / 2, width / 2 + 10);
     ctx.restore();
   }
 

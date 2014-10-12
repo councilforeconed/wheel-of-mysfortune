@@ -1,7 +1,7 @@
-var misfortunes = [];
+var yourMisfortunes = [];
 var $misfortunesElement = $('#misfortunes');
 
 function addMisfortune(misfortune) {
-  misfortunes.push(misfortune);
+  yourMisfortunes.push(misfortune);
   $misfortunesElement.append('<p>' + misfortune + '</p>');
 }
