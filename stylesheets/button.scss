@@ -57,6 +57,11 @@ button.secondary:active, input[type="submit"].secondary:active, .button.secondar
   background-color: #EEE;
 }
 
+button.block, input[type="submit"].block, .button.block {
+  width: 100%;
+  display: block;
+}
+
 button.xl, input[type="submit"].xl, .button.xl {
   font-size: 1.5em;
 }

@@ -1,11 +1,3 @@
-var misfortunes = [];
-var $misfortunesElement = $('#misfortunes');
-
-function addMisfortune(misfortune) {
-  misfortunes.push(misfortune);
-  $misfortunesElement.append('<p>' + misfortune + '</p>');
-}
-
 /* globals addMisfortune */
 
 $(document).ready(function () {
@@ -51,6 +43,8 @@ $(document).ready(function () {
       ctx.lineWidth = 2;
     
       ctx.font = '12px sans-serif';
+      
+      ctx.imageSmoothingEnabled
     
       for(var i = 1; i <= 16; i++) {
         var angle = startAngle + i * arc;
@@ -132,4 +126,3 @@ $(document).ready(function () {
   });
   
 });
-

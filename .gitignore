@@ -22,3 +22,5 @@ Thumbs.db
 *.un~
 /bower_components
 /stylesheets/.sass-cache
+
+*.map

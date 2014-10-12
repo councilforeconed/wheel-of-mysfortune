@@ -1,0 +1,4 @@
+excludeInFileChooser = "{$excludeInFileChooser,log,vendor,tmp,META-INF,.svn,bower_components,app.css.map}"
+excludeInBrowser = "{$excludeInBrowser,log,vendor,tmp,META-INF,.svn}"
+excludeInFolderSearch = "{$excludeInFolderSearch,log,vendor,tmp,META-INF,.svn,bower_components}"
+include = "{$include,.gitignore,.htpasswd,.jshintrc,.editor_config}"

@@ -4,6 +4,7 @@
     "window": true,
     "location": true,
     "setTimeout": true,
+    "clearTimeout": true,
     "console": true,
     "$": true
   },
