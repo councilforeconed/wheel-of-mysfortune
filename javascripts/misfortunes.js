@@ -1,7 +1,5 @@
-var yourMisfortunes = [];
-var $misfortunesElement = $('#misfortunes');
-
-var possibleMisfortunes = [
+var Misfortunes = new Backbone.Model({
+  misfortunes: [
     {
         "amount": -45,
         "message": "You went over you cell phone bill usage and owe an additional $45.00."
@@ -66,10 +64,10 @@ var possibleMisfortunes = [
         "amount": -150,
         "message": "You go to a wedding and it costs you $150.00."
     }
-];
+  ]
+});
 
-function addMisfortune(misfortune) {
-  var thisMisfortune = possibleMisfortunes[misfortune];
-  yourMisfortunes.push(thisMisfortune);
-  $misfortunesElement.append('<p><strong>' + (misfortune + 1) + '</strong>: ' + thisMisfortune.message + '</p>');
-}
+Misfortunes.addEvent = function (misfortune) {
+  Paychecks.add({misfortune: this.get('misfortunes')[misfortune]});
+  $('.misfortune-message').text(this.get('misfortunes')[misfortune].message);
+};

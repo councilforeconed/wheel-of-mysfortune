@@ -6,7 +6,8 @@
     "setTimeout": true,
     "clearTimeout": true,
     "console": true,
-    "$": true
+    "$": true,
+    "Backbone": true
   },
   "node" : false,
   "browser" : false,

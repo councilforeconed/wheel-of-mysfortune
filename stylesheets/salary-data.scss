@@ -1,0 +1,13 @@
+.salary-data {
+  background-color: $lightBlue;
+  color: white;
+  .columns {
+    padding: 1em inherit;
+  }
+  hr {
+    border: 1px solid white;
+  }
+  p {
+    line-height: 0.5
+  }
+}

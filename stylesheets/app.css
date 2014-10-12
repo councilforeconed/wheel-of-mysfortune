@@ -338,37 +338,36 @@ select {
     select {
       width: 92%; } }
 
-.header-table {
-  text-align: center;
-  margin-top: 2rem; }
-  .header-table h4 {
-    font-size: 0.8em; }
-    @media screen and (max-width: 768px) {
-      .header-table h4 {
-        display: inline;
-        font-size: 1em; }
-        .header-table h4 :after {
-          content: ": "; } }
-  .header-table .rate h4 {
-    background-color: #fff5d5;
-    padding: 1rem 0;
-    border-radius: 3px; }
-  .header-table .employed h4 {
-    background-color: #99c987;
-    padding: 1rem 0;
-    border-radius: 3px; }
-  .header-table .unemployed h4 {
-    background-color: #c43331;
-    padding: 1rem 0;
-    border-radius: 3px; }
-  .header-table .ineligible h4 {
-    background-color: #f8d43a;
-    padding: 1rem 0;
-    border-radius: 3px; }
-  .header-table p {
-    font-size: 2rem; }
+table {
+  width: 100%;
+  margin-top: 2rem;
+  counter-reset: paycheck; }
+
+td, th {
+  width: 25%;
+  text-align: left;
+  padding: 0.6rem; }
+
+.paycheck:after {
+  counter-increment: paycheck;
+  content: counter(paycheck); }
+
+.salary-data {
+  background-color: #b6ddd3;
+  color: white; }
+  .salary-data .columns {
+    padding: 1em inherit; }
+  .salary-data hr {
+    border: 1px solid white; }
+  .salary-data p {
+    line-height: 0.5; }
 
 * {
   box-sizing: border-box; }
+
+.misfortune-message {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #c43331; }
 
 /*# sourceMappingURL=app.css.map */

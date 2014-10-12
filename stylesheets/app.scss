@@ -8,7 +8,14 @@
 @import 'fonts';
 @import 'input';
 @import 'table';
+@import 'salary-data';
 
 * {
   box-sizing: border-box;
+}
+
+.misfortune-message {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: $red;
 }

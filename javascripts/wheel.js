@@ -108,8 +108,8 @@ $(document).ready(function () {
     var misfortune = Math.floor((360 - degrees % 360) / arcd);
     ctx.save();
     ctx.font = 'bold 30px sans-serif';
-    addMisfortune(misfortune);
-    ctx.fillText(misfortune + 1, width / 2 - ctx.measureText(misfortune).width / 2, width / 2 + 10);
+    Misfortunes.addEvent(misfortune);
+    ctx.fillText(misfortune + 1, width / 2 - ctx.measureText(misfortune + 1).width / 2, width / 2 + 10);
     ctx.restore();
   }
 
