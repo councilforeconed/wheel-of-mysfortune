@@ -18,3 +18,7 @@
 .DS_Store
 Thumbs.db
 /coverage/*
+
+*.un~
+/bower_components
+/stylesheets/.sass-cache

@@ -1,0 +1,28 @@
+{
+  "name": "wheel-of-mysfortune",
+  "version": "0.0.0",
+  "homepage": "https://github.com/councilforeconed/wheel-of-mysfortune",
+  "authors": [
+    "Steve Kinney <hello@stevekinney.net>"
+  ],
+  "description": "Interactive activity for CEE's Math in the Real World publication",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MPLv2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "javascripts/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1",
+    "skeleton-sass": "~1.6.3",
+    "numeral": "~1.5.3"
+  }
+}
