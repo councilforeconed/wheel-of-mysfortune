@@ -24,7 +24,7 @@ var Paycheck = Backbone.Model.extend({
             '<td>', numeral(this.get('misfortune').amount).format('$0,0.00'), '</td>',
             '<td>', numeral(this.actualEarnings()).format('$0,0.00'), '</td>',
             '</tr>'
-            ].join('')
+           ].join('');
   }
 });
 
@@ -39,6 +39,17 @@ Paychecks.rebuildLedger = function () {
   })
 };
 
+Paychecks.chartData = function () {
+  var data = [ { x: 0, y: 0 } ];
+  this.models.forEach(function (paycheck, index) {
+    var datum = paycheck.actualEarnings() + data.slice(-1)[0].y;
+    data.push({ x: index + 1, y: datum });
+  });
+  return data;
+};
+
 Paychecks.on('add', function (paycheck) {
   $ledger.append(paycheck.toHTML());
+  graph.series[0].data = this.chartData();
+  graph.update();
 });
