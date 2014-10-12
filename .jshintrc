@@ -4,9 +4,7 @@
     "window": true,
     "location": true,
     "setTimeout": true,
-    "Ember": true,
-    "Em": true,
-    "DS": true,
+    "console": true,
     "$": true
   },
   "node" : false,
