@@ -2,7 +2,7 @@ var $ledger = $('.ledger');
 
 var Paycheck = Backbone.Model.extend({
   initialize: function () {
-    this.set('expectedEarnings', 600);
+    this.set('expectedEarnings', expectedEarnings);
   },
   
   actualEarnings: function () {

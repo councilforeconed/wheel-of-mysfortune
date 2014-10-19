@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   var $wheelElement = $('#wheel-of-mystfortune');
   
-  var width = $wheelElement.width();
+  var width = 340;
   var height = width;
   
   $wheelElement.prepend('<canvas width="' + width + '" height="' + height + '"></canvas>');

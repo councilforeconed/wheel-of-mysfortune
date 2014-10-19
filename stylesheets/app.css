@@ -383,6 +383,9 @@ svg {
   stroke: #000;
   shape-rendering: crispEdges; }
 
+#activity, #income {
+  display: none; }
+
 .x.axis path {
   display: none; }
 
