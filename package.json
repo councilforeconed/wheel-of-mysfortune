@@ -4,7 +4,8 @@
   "description": "",
   "main": "javascripts/application.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "scp -r * cee:~/technology/wheel-of-mystfortune"
   },
   "repository": {
     "type": "git",

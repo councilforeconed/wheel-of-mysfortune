@@ -24,3 +24,4 @@ Thumbs.db
 /stylesheets/.sass-cache
 
 *.map
+*.min.js
