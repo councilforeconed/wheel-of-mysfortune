@@ -5082,7 +5082,7 @@
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
 	"displayValue": "wheel-of-mysfortune",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets_gray"
 	},
 "projectSettings": {
@@ -5253,7 +5253,7 @@
 	"javascriptCreateSourceMap": 1,
 	"javascriptOutputStyle": 1,
 	"javascriptSyntaxCheckerStyle": 1,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "Backbone, d3, numeral",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
@@ -5288,7 +5288,7 @@
 			"flagValue": -1
 			},
 		"devel": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"dojo": {
@@ -5356,7 +5356,7 @@
 			"flagValue": -1
 			},
 		"latedef": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"laxbreak": {
@@ -5381,7 +5381,7 @@
 			},
 		"maxlen": {
 			"active": 0,
-			"flagValue": 150
+			"flagValue": 80
 			},
 		"maxparams": {
 			"active": 0,
@@ -5500,7 +5500,7 @@
 			"flagValue": -1
 			},
 		"unused": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"withstmt": {

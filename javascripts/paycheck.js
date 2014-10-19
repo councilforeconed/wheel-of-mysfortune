@@ -14,7 +14,7 @@ var Paycheck = Backbone.Model.extend({
       expectedEarnings: this.get('expectedEarnings'),
       misfortune: this.get('misfortune').amount,
       actualEarnings: this.actualEarnings()
-    }
+    };
   },
   
   toHTML: function () {
@@ -23,6 +23,7 @@ var Paycheck = Backbone.Model.extend({
             '<td>', numeral(this.get('expectedEarnings')).format('$0,0.00'), '</td>',
             '<td>', numeral(this.get('misfortune').amount).format('$0,0.00'), '</td>',
             '<td>', numeral(this.actualEarnings()).format('$0,0.00'), '</td>',
+            '<td>', numeral(Paychecks.totalEarnings()).format('$0,0.00'), '</td>',
             '</tr>'
            ].join('');
   }
@@ -36,20 +37,16 @@ Paychecks.rebuildLedger = function () {
   $ledger.empty();
   this.models.forEach(function (paycheck) {
     $ledger.append(paycheck.toHTML());
-  })
+  });
 };
 
-Paychecks.chartData = function () {
-  var data = [ { x: 0, y: 0 } ];
-  this.models.forEach(function (paycheck, index) {
-    var datum = paycheck.actualEarnings() + data.slice(-1)[0].y;
-    data.push({ x: (index + 1) / 2, y: datum });
-  });
-  return data;
+Paychecks.totalEarnings = function () {
+  return this.models.reduce(function (sum, paycheck) {
+    return sum + paycheck.actualEarnings();
+  }, 0);
 };
 
 Paychecks.on('add', function (paycheck) {
   $ledger.append(paycheck.toHTML());
-  graph.series[0].data = this.chartData();
-  graph.update();
+  chart.addValue(Paychecks.totalEarnings());
 });

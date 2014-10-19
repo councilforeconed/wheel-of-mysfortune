@@ -1,3 +1,5 @@
+/* globals Paychecks */
+
 var Misfortunes = new Backbone.Model({
   misfortunes: [
     {
