@@ -203,6 +203,7 @@ button, input[type="submit"], .button {
   border-radius: 3px;
   outline: none;
   padding: 0.8rem 2rem;
+  margin: 1em 0;
   font-weight: 300; }
   @media screen and (max-width: 480px) {
     button, input[type="submit"], .button {

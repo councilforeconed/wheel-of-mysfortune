@@ -1,14 +1,20 @@
 var $ledger = $('.ledger');
+var $misfortunes = $('#misfortunes').hide();
+var $showMisfortunesButton = $('#show-misfortunes').hide();
+
+$showMisfortunesButton.on('click', function () {
+  $misfortunes.toggle();
+});
 
 var Paycheck = Backbone.Model.extend({
   initialize: function () {
     this.set('expectedEarnings', expectedEarnings);
   },
-  
+
   actualEarnings: function () {
     return this.get('expectedEarnings') + this.get('misfortune').amount;
   },
-  
+
   toJSON: function () {
     return {
       expectedEarnings: this.get('expectedEarnings'),
@@ -16,7 +22,7 @@ var Paycheck = Backbone.Model.extend({
       actualEarnings: this.actualEarnings()
     };
   },
-  
+
   toHTML: function () {
     return ['<tr>',
             '<td class="paycheck"></td>',
@@ -49,4 +55,9 @@ Paychecks.totalEarnings = function () {
 Paychecks.on('add', function (paycheck) {
   $ledger.append(paycheck.toHTML());
   chart.addValue(Paychecks.totalEarnings());
+  if (currentTurn() >= 24) { $showMisfortunesButton.show(); }
 });
+
+function currentTurn() {
+  return Paychecks.size() + 1;
+}

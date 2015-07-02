@@ -1,3 +1,5 @@
+/* globals numeral */
+
 var $activity = $('#income, #activity');
 
 var $setSalaryButton = $('#set-salary');
